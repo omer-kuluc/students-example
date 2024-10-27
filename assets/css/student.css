@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #F3F3E0;
+
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-block: 55px;
+  margin-inline : 200px;
+}
+
+.inner-container {
+  margin-inline : auto;
+  max-width: 650px;
+}
+
+button {
+  width: 85px;
+  padding: 5px 10px;
+  background-color: aqua;
+  color: brown;
+  border-radius: 10px;
+  display: block;
+  margin-inline : auto;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.classList-item {
+  color : #133E87;
+  border: 2px solid red;
+  margin-bottom: 20px;;
+}
+
+.student-count {
+  margin-top: 25px;
+  margin-inline : auto;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible ;
+}
+
+.wmn-border {
+  border : 10px solid pink;
+  margin-bottom: 20px;
+}
+
+.men-border {
+  border : 10px solid blue;;
+}
+
+.list-section {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.list-section p {
+  margin-block: auto;
+  border : 3px solid sandybrown;
+  text-align: center;
+}
+
+.women-list {
+  border : 5px solid darkred;
+  padding: 10px;
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.women-list-item, .men-list-item {
+  font-style: italic;
+}
+
+.men-list {
+  border : 5px solid darkcyan;
+  padding: 10px;
+  border-radius: 10px;
+  list-style-type: none;
+}
