@@ -100,6 +100,12 @@ indexWomen = 0;
 indexMen = 0;
 
 function showList() {
+        classList.innerHTML='';
+        indexWomen = 0;
+        indexMen = 0;
+        womenCount = 0;
+        menCount = 0;
+   
     for (const stu of students){
         classList.innerHTML+= `<li class='classList-item'>id :${stu.id}, isim: ${stu.name}, soyisim : ${stu.lastname},
         cinsiyet : ${stu.gender}, bölüm :  ${stu.section}, rol : ${stu.role}</li>`;
@@ -112,8 +118,8 @@ function showList() {
             menList[indexMen]=stu;
             menCount++;
             indexMen++;
+            }
         }
-    }
     womenCountTxt.innerText = womenCount;
     menCountTxt.innerText = menCount;
     const stuCount = document.querySelector('.student-count');
@@ -121,6 +127,8 @@ function showList() {
     const listSection = document.querySelector('.list-section');
     listSection.classList.remove('hidden');
 
+    womenListArea.innerHTML='';
+    menListArea.innerHTML = '';
     printWomenList();
     printMenList();
 }
@@ -130,9 +138,7 @@ function printWomenList() {
     womenListArea.classList.remove('hidden');
     for(const wom of womenList) {
         womenListArea.innerHTML+= `<li class='women-list-item'> isim : ${wom.name}, soyisim :${wom.lastname} </li>`
-        
     }
-    
 }
 
 function printMenList() {
